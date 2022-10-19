@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script src="./src/index.js" defer></script>
+    <link rel="stylesheet" href="../style/style.css" />
+    <title>Document</title>
+  </head>
+  <body>
+    <main>
+      <h1>Calculado de Derivadas</h1>
+      <div class="container">
+        <label for="input-derivative">Derivada:</label>
+        <input id="input-derivative" />
+        <button id="button-derivative themeSwitcher" onclick="showAnswer()">
+          derivar
+        </button>
+      </div>
+      <ul id="derivate-list"></ul>
+    </main>
+    <div class="center">
+      <canvas id="myCanvas" width="1200" height="800"> </canvas>
+    </div>
+  </body>
+</html>
