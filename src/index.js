@@ -237,3 +237,12 @@ function graph(numberX = 1, eleveteX = 1, divisionX = 1, eleveteX2 = 1) {
     pincel.fillRect(600 + x, 400, 5, -y);
   }
 }
+
+function showExemple() {
+  const ul = document.getElementById("derivate-list");
+  const li2 = document.createElement("li");
+  li2.innerText = `As derivadas devem ser escritas da seguinte forma:
+  2x^2 onde ^ = elevado a, e quando for fazer uma divisão
+  ou multiplicação utilize das barras. ex: (2x^2 / 2x) ou (3x * 4x)`;
+  ul.appendChild(li2);
+}
