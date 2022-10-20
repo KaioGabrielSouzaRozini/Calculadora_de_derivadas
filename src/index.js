@@ -190,12 +190,45 @@ function derivative(number) {
         }
       } else {
         multiplication = true;
+        if (a2 == "") {
+          a2 = 1;
+        }
+        if (b2 == "") {
+          a2 = 1;
+        }
+        if (a == "") {
+          a = 1;
+        }
+        if (b == "") {
+          a = 1;
+        }
+
+        a2 = parseInt(a2);
+        a = parseInt(a);
+        b2 = parseInt(b2);
+        b = parseInt(b);
         graph(a * a2, b + b2);
 
         return `( ${derivadanumber1}* ${number2} + ${number1}* ${derivadanumber2}) `;
       }
     } else {
       division = true;
+      if (a2 == "") {
+        a2 = 1;
+      }
+      if (b2 == "") {
+        a2 = 1;
+      }
+      if (a == "") {
+        a = 1;
+      }
+      if (b == "") {
+        a = 1;
+      }
+      a2 = parseInt(a2);
+      a = parseInt(a);
+      b2 = parseInt(b2);
+      b = parseInt(b);
       graph(a / a2, b - b2);
 
       return `( ${derivadanumber1}* ${number2} - ${number1} * ${derivadanumber2} / (${number2})^2) `;
