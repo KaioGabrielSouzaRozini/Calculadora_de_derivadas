@@ -15,16 +15,6 @@ pincel.moveTo(1200, 400);
 pincel.lineTo(-1200, 400);
 pincel.stroke();
 
-function showAnswer() {
-  answear = ``;
-  var answearDerivative = document.getElementById("input-derivative").value;
-  identifiesDerivative(answearDerivative);
-  const ul = document.getElementById("derivate-list");
-  const li = document.createElement("li");
-  li.innerText = `A derivada de ${answearDerivative} é : ${answear}`;
-  ul.appendChild(li);
-  document.getElementById("input-derivative").value = "";
-}
 function identifiesDerivative(number) {
   if (number != "?") {
     var number1;
@@ -238,11 +228,29 @@ function graph(numberX = 1, eleveteX = 1, divisionX = 1, eleveteX2 = 1) {
   }
 }
 
+function showAnswer() {
+  answear = ``;
+  var answearDerivative = document.getElementById("input-derivative").value;
+  identifiesDerivative(answearDerivative);
+  const ul = document.getElementById("derivate-list");
+  const li = document.createElement("li");
+  li.id = "li-id";
+  li.innerText = `A derivada de ${answearDerivative} é : ${answear}`;
+  ul.appendChild(li);
+  document.getElementById("input-derivative").value = "";
+}
+
 function showExemple() {
   const ul = document.getElementById("derivate-list");
   const li2 = document.createElement("li");
+  li2.id = "li-id";
   li2.innerText = `As derivadas devem ser escritas da seguinte forma:
   2x^2 onde ^ = elevado a, e quando for fazer uma divisão
   ou multiplicação utilize das barras. ex: (2x^2 / 2x) ou (3x * 4x)`;
   ul.appendChild(li2);
+}
+
+function deleteAll() {
+  const listRemove = document.getElementById("li-id");
+  document.getElementById("derivate-list").removeChild(listRemove);
 }
